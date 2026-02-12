@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+body {
+  margin: 0;
+  background: transparent;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* Main Savage Box */
+.savage-popup {
+  position: absolute;
+  top: 40%;
+  left: -500px;
+  transform: translateY(-50%);
+  font-size: 70px;
+  font-weight: bold;
+  color: #ff0000;
+  text-shadow: 0 0 10px red, 0 0 30px crimson, 0 0 60px darkred;
+  animation: slideIn 0.7s forwards,
+             shake 0.4s 0.7s 3,
+             glow 1s infinite alternate,
+             fadeOut 0.8s 3s forwards;
+}
+
+/* Slide In */
+@keyframes slideIn {
+  to { left: 50%; transform: translate(-50%, -50%); }
+}
+
+/* Glow Effect */
+@keyframes glow {
+  from { text-shadow: 0 0 10px red; }
+  to { text-shadow: 0 0 40px crimson, 0 0 80px red; }
+}
+
+/* Shake Effect */
+@keyframes shake {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  25% { transform: translate(-52%, -50%) rotate(-2deg); }
+  50% { transform: translate(-48%, -50%) rotate(2deg); }
+  75% { transform: translate(-52%, -50%) rotate(-2deg); }
+  100% { transform: translate(-50%, -50%) rotate(0deg); }
+}
+
+/* Fade Out */
+@keyframes fadeOut {
+  to { opacity: 0; }
+}
+</style>
+</head>
+
+<body>
+  <div class="savage-popup">
+    🔥 SAVAGE 🔥
+  </div>
+</body>
+</html>
